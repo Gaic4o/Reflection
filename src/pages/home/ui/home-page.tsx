@@ -17,7 +17,7 @@ export default function HomePage() {
   }>({
     id: "memoir-funnel",
     initial: {
-      step: "Start",
+      step: "Three",
       context: {},
     },
   });
