@@ -3,10 +3,14 @@ import Image from "next/image";
 import { useCallback, useState } from "react";
 import { TEACHER_LIST, TeacherType } from "../model";
 
+interface StartClassProps {
+  onNext: (teacherNm: string) => void;
+}
+
 /**
  * 시작 화면 선생님을 선택할 수 있어요.
  */
-const StartClass = () => {
+const StartClass = ({ onNext }: StartClassProps) => {
   // 선택된 선생님 상태 관리
   const [selectedTeacher, setSelectedTeacher] = useState<TeacherType>(null);
 
@@ -14,6 +18,20 @@ const StartClass = () => {
   const handleSelect = useCallback((teacher: TeacherType) => {
     setSelectedTeacher((prev) => (prev === teacher ? null : teacher));
   }, []);
+
+  // START 버튼 클릭 핸들러
+  const handleStart = useCallback(() => {
+    if (!selectedTeacher) return;
+
+    // 선택된 선생님 ID로 선생님 정보 찾기
+    const selectedTeacherInfo = TEACHER_LIST.find(
+      (teacher) => teacher.id === selectedTeacher
+    );
+
+    if (selectedTeacherInfo) {
+      onNext(selectedTeacherInfo.name);
+    }
+  }, [selectedTeacher, onNext]);
 
   return (
     <Container className="mx-[10px]">
@@ -65,7 +83,16 @@ const StartClass = () => {
       </Box>
 
       <div className="flex items-end flex-col mt-[67px] mr-[24px]">
-        <button className="h-[50px] w-[218px] text-[#fff] text-[30px] bg-[#5A3625] font-medium rounded-t-[40px]">
+        <button
+          onClick={handleStart}
+          disabled={!selectedTeacher}
+          className={`h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px]
+            ${
+              selectedTeacher
+                ? "bg-[#5A3625] cursor-pointer"
+                : "bg-[#5A3625]/50 cursor-not-allowed"
+            }`}
+        >
           START
         </button>
         <div className="h-[11px] w-[218px] bg-[#0F1048] rounded-b-[3px]"></div>

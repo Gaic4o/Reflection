@@ -5,10 +5,15 @@ import { useFunnel } from "@use-funnel/browser";
 import Image from "next/image";
 import { useState } from "react";
 import { FunnelSteps, stepData } from "../model";
-const SecondPeriod = () => {
+
+interface SecondSixProps {
+  onNext: () => void;
+}
+
+const SecondPeriod = ({ onNext }: SecondSixProps) => {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [score, setScore] = useState(0);
-  console.log(score, "123");
+
   const funnel = useFunnel<FunnelSteps>({
     id: "second-funnel",
     initial: {
@@ -43,6 +48,11 @@ const SecondPeriod = () => {
 
     const steps = Object.keys(stepData) as Array<keyof FunnelSteps>;
     const currentIndex = steps.indexOf(currentStep);
+
+    if (currentStep === "SecondSix") {
+      onNext();
+      return;
+    }
 
     // 점수 계산
     if (selectedOption === currentData.correctAnswer) {
@@ -83,7 +93,7 @@ const SecondPeriod = () => {
 
         <div className="flex items-end flex-col mt-[62px] mr-[24px]">
           <button
-            onClick={handleNext}
+            onClick={() => handleNext()}
             disabled={selectedOption === null}
             className={`h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px] transition-all duration-200 ${
               selectedOption === null

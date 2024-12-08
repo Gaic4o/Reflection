@@ -2,7 +2,11 @@ import { Box, Container } from "@radix-ui/themes";
 import { useCallback, useState } from "react";
 import { inputFields } from "../model";
 
-const FirstPeriod = () => {
+interface FirstPeriodProps {
+  onNext: (data: { userNm: string; team: string; experience: string }) => void;
+}
+
+const FirstPeriod = ({ onNext }: FirstPeriodProps) => {
   const [inputs, setInputs] = useState<Record<string, string>>({});
 
   const handleInputChange = useCallback((id: string, value: string) => {
@@ -11,6 +15,22 @@ const FirstPeriod = () => {
       [id]: value,
     }));
   }, []);
+
+  // 모든 입력 필드가 채워졌는지 확인
+  const isAllFieldsFilled = useCallback(() => {
+    return inputFields.every((field) => inputs[field.id]?.trim().length > 0);
+  }, [inputs]);
+
+  // NEXT 버튼 클릭 핸들러
+  const handleNext = useCallback(() => {
+    if (!isAllFieldsFilled()) return;
+
+    onNext({
+      userNm: inputs.name,
+      team: inputs.job,
+      experience: inputs.experience,
+    });
+  }, [inputs, isAllFieldsFilled, onNext]);
 
   return (
     <Container className="mx-[10px]">
@@ -38,7 +58,16 @@ const FirstPeriod = () => {
         ))}
       </Container>
       <div className="flex items-end flex-col mt-[67px] mr-[24px]">
-        <button className="h-[50px] w-[218px] text-[#fff] text-[30px] bg-[#5A3625] font-medium rounded-t-[40px]">
+        <button
+          onClick={handleNext}
+          disabled={!isAllFieldsFilled()}
+          className={`h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px]
+            ${
+              isAllFieldsFilled()
+                ? "bg-[#5A3625] cursor-pointer"
+                : "bg-[#5A3625]/50 cursor-not-allowed"
+            }`}
+        >
           NEXT
         </button>
         <div className="h-[11px] w-[218px] bg-[#0F1048] rounded-b-[3px]"></div>
