@@ -1,4 +1,4 @@
-import { TeacherInfo } from "../types";
+import { TeacherInfo } from "@/src/features/start/model";
 
 // 선생님 목록 데이터
 export const RETROSPECT_LIST: TeacherInfo[] = [

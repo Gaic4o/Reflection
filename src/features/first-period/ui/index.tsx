@@ -26,8 +26,8 @@ const FirstPeriod = ({ onNext }: FirstPeriodProps) => {
     if (!isAllFieldsFilled()) return;
 
     onNext({
-      userNm: inputs.name,
-      team: inputs.job,
+      userNm: inputs.userNm,
+      team: inputs.team,
       experience: inputs.experience,
     });
   }, [inputs, isAllFieldsFilled, onNext]);
@@ -72,6 +72,11 @@ const FirstPeriod = ({ onNext }: FirstPeriodProps) => {
         </button>
         <div className="h-[11px] w-[218px] bg-[#0F1048] rounded-b-[3px]"></div>
       </div>
+      <footer className="bg-[#7C553E] h-[50px] flex justify-center items-center">
+        <p className="text-[#fff] text-[12px] font-medium">
+          Powered by Whateverchallenge
+        </p>
+      </footer>
     </Container>
   );
 };
