@@ -105,6 +105,11 @@ const SecondPeriod = ({ onNext }: SecondSixProps) => {
           </button>
           <div className="h-[11px] w-[218px] bg-[#0F1048] rounded-b-[3px]"></div>
         </div>
+        <footer className="bg-[#7C553E] h-[50px] flex justify-center items-center">
+          <p className="text-[#fff] text-[12px] font-medium">
+            Powered by Whateverchallenge
+          </p>
+        </footer>
       </Container>
     );
   }
@@ -165,6 +170,11 @@ const SecondPeriod = ({ onNext }: SecondSixProps) => {
         </button>
         <div className="h-[11px] w-[218px] bg-[#0F1048] rounded-b-[3px]"></div>
       </div>
+      <footer className="bg-[#7C553E] h-[50px] flex justify-center items-center">
+        <p className="text-[#fff] text-[12px] font-medium">
+          Powered by Whateverchallenge
+        </p>
+      </footer>
     </Container>
   );
 };

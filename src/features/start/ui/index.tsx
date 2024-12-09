@@ -34,7 +34,7 @@ const StartClass = ({ onNext }: StartClassProps) => {
   }, [selectedTeacher, onNext]);
 
   return (
-    <Container className="mx-[10px]">
+    <Container className="mx-[10px] h-[100vh] bg-[#263D2F]">
       <h1 className="font-[family-name:var(--font-school_safety_chalkboard_eraser)] text-[64px] text-center text-[#fff] font-semibold mt-[69.95px] mb-[32.05px]">
         반성문을 부탁해!
       </h1>
@@ -82,7 +82,7 @@ const StartClass = ({ onNext }: StartClassProps) => {
         ))}
       </Box>
 
-      <div className="flex items-end flex-col mt-[67px] mr-[24px]">
+      <div className="flex items-end flex-col mt-[67px] mr-[24px] bg-[#263D2F] w-full">
         <button
           onClick={handleStart}
           disabled={!selectedTeacher}
@@ -97,6 +97,11 @@ const StartClass = ({ onNext }: StartClassProps) => {
         </button>
         <div className="h-[11px] w-[218px] bg-[#0F1048] rounded-b-[3px]"></div>
       </div>
+      <footer className="bg-[#7C553E] h-[50px] flex justify-center items-center">
+        <p className="text-[#fff] text-[12px] font-medium">
+          Powered by Whateverchallenge
+        </p>
+      </footer>
     </Container>
   );
 };
