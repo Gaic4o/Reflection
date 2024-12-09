@@ -33,7 +33,7 @@ export const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang="ko">
+    <html lang="en">
       <body
         className={`${eraserDust.variable} ${SchoolSafetyChalkboardEraser.variable} ${ChildFundKoreaMinGuk.variable}`}
       >
