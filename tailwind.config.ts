@@ -8,11 +8,6 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      fontFamily: {
-        "school-safety": ["var(--font-school_safety_chalkboard_eraser)"],
-        "eraser-dust": ["var(--font-eraser-dust)"],
-        "child-fund": ["var(--font-child-fund-korea-min-guk)"],
-      },
     },
   },
   plugins: [],

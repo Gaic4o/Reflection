@@ -34,21 +34,21 @@ const FirstPeriod = ({ onNext }: FirstPeriodProps) => {
 
   return (
     <Container className="mx-[10px]">
-      <h1 className="font-[family-name:var(--font-school_safety_chalkboard_eraser)] text-[64px] text-center text-[#fff] font-semibold mt-[77px] mb-[37px]">
+      <h1 className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[64px] text-center text-[#fff] font-semibold mt-[77px] mb-[37px]">
         1교시 자기소개 시간
       </h1>
-      <p className="text-[32px] text-center text-[#fff] font-semibold mb-[89px] mt-[37px]">
+      <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[32px] text-center text-[#fff] font-semibold mb-[89px] mt-[37px]">
         선생님께 자기소개를 해볼까요?
       </p>
 
       <Container>
         {inputFields.map((field) => (
           <Box key={field.id} className="mb-[40px]">
-            <p className="text-[32px] font-semibold mb-[15px] text-[#fff]">
+            <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[32px] font-semibold mb-[15px] text-[#fff]">
               {field.label}
             </p>
             <input
-              className="bg-[#D1D5DB] pl-[19px] placeholder:text-[#AFAFAF] text-[30px] w-[100%] h-[70px] rounded-[15px]"
+              className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] bg-[#D1D5DB] pl-[19px] placeholder:text-[#AFAFAF] text-[30px] w-[100%] h-[70px] rounded-[15px]"
               type="text"
               value={inputs[field.id] || ""}
               onChange={(e) => handleInputChange(field.id, e.target.value)}
@@ -61,7 +61,7 @@ const FirstPeriod = ({ onNext }: FirstPeriodProps) => {
         <button
           onClick={handleNext}
           disabled={!isAllFieldsFilled()}
-          className={`h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px]
+          className={`font-[family-name:var(--font-eraser-dust)] h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px]
             ${
               isAllFieldsFilled()
                 ? "bg-[#5A3625] cursor-pointer"
@@ -72,7 +72,7 @@ const FirstPeriod = ({ onNext }: FirstPeriodProps) => {
         </button>
         <div className="h-[11px] w-[218px] bg-[#0F1048] rounded-b-[3px]"></div>
       </div>
-      <footer className="bg-[#7C553E] h-[50px] flex justify-center items-center">
+      <footer className="font-[family-name:var(--font-eraser-dust)] bg-[#7C553E] h-[50px] flex justify-center items-center">
         <p className="text-[#fff] text-[12px] font-medium">
           Powered by Whateverchallenge
         </p>

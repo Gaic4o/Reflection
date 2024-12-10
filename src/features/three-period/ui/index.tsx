@@ -39,10 +39,10 @@ const ThreePeriod = ({ homeContext, onComplete }: ThreePeriodProps) => {
       <formFunnel.Render
         SELECT={({ history }) => (
           <>
-            <h1 className="font-[family-name:var(--font-school_safety_chalkboard_eraser)] text-[64px] text-center text-[#fff]">
+            <h1 className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[64px] text-center text-[#fff]">
               3교시 회고 시간
             </h1>
-            <p className="text-[32px] text-center text-[#fff] font-semibold mb-[40px] mt-[57px]">
+            <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[32px] text-center text-[#fff] font-semibold mb-[40px] mt-[57px]">
               24년을 돌아보며 종아리를 걷는 시간,
               <br />
               어떤 회초리를 원하시나요?
@@ -50,7 +50,7 @@ const ThreePeriod = ({ homeContext, onComplete }: ThreePeriodProps) => {
             <Box as="div">
               <Flex
                 onClick={() => setRetroType("KPT")}
-                className={`flex flex-row border-2 p-[26px] rounded-lg cursor-pointer transition-all duration-300 hover:border-white/40
+                className={`font-[family-name:var(--font-school-safety-chalkboard-eraser)] flex flex-row border-2 p-[26px] rounded-lg cursor-pointer transition-all duration-300 hover:border-white/40
                   ${
                     retroType === "KPT"
                       ? "border-[#93C5FD] bg-white/10"
@@ -82,7 +82,7 @@ const ThreePeriod = ({ homeContext, onComplete }: ThreePeriodProps) => {
             <Box as="div" className="mt-[26px]">
               <Flex
                 onClick={() => setRetroType("YWT")}
-                className={`flex flex-row border-2 p-[26px] rounded-lg cursor-pointer transition-all duration-300 hover:border-white/40
+                className={`font-[family-name:var(--font-school-safety-chalkboard-eraser)] flex flex-row border-2 p-[26px] rounded-lg cursor-pointer transition-all duration-300 hover:border-white/40
                   ${
                     retroType === "YWT"
                       ? "border-[#86EFAC] bg-white/10"
@@ -191,7 +191,7 @@ const ThreePeriodForm = ({
   }, [answers, isAllAnswered, onComplete, type]);
 
   return (
-    <Container className="mx-[19px]">
+    <Container className="mx-[19px] font-[family-name:var(--font-school-safety-chalkboard-eraser)]">
       <h1 className="text-[64px] text-center text-[#fff] font-semibold mt-[77px] mb-[37px]">
         {type} 회고
       </h1>
@@ -237,7 +237,7 @@ const ThreePeriodForm = ({
         </button>
         <div className="h-[11px] w-[218px] bg-[#0F1048] rounded-b-[3px]"></div>
       </div>
-      <footer className="bg-[#7C553E] h-[50px] flex justify-center items-center">
+      <footer className="font-[family-name:var(--font-eraser-dust)] bg-[#7C553E] h-[50px] flex justify-center items-center">
         <p className="text-[#fff] text-[12px] font-medium">
           Powered by Whateverchallenge
         </p>
