@@ -35,10 +35,10 @@ const StartClass = ({ onNext }: StartClassProps) => {
 
   return (
     <Container className="mx-[10px] h-[100vh] bg-[#263D2F]">
-      <h1 className="font-[family-name:var(--font-school_safety_chalkboard_eraser)] text-[64px] text-center text-[#fff] font-semibold mt-[69.95px] mb-[32.05px]">
+      <h1 className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[64px] text-center text-[#fff] font-semibold mt-[69.95px] mb-[32.05px]">
         반성문을 부탁해!
       </h1>
-      <p className="text-[32px] text-center text-[#fff] font-semibold mb-[80px] mt-[32.05px]">
+      <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[32px] text-center text-[#fff] font-semibold mb-[80px] mt-[32.05px]">
         AI 선생님과 함께 진행하는 2024 연말회고
       </p>
 
@@ -65,11 +65,11 @@ const StartClass = ({ onNext }: StartClassProps) => {
 
             <div className="flex flex-col">
               {/* 선생님 이름 */}
-              <p className="mb-[3px] text-[24px] text-[rgba(255,255,255,0.9)] font-semibold">
+              <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] mb-[3px] text-[24px] text-[rgba(255,255,255,0.9)] font-semibold">
                 {teacher.name}
               </p>
               {/* 선생님 소개 문구 - 줄바꿈 처리 포함 */}
-              <p className="text-[16px] font-semibold text-[#D1D5DB">
+              <p className="font-[family-name:var(--font-eraser-dust)] text-[16px] font-semibold text-[#D1D5DB">
                 {teacher.description.map((line, i) => (
                   <span key={i}>
                     {line}
@@ -86,7 +86,7 @@ const StartClass = ({ onNext }: StartClassProps) => {
         <button
           onClick={handleStart}
           disabled={!selectedTeacher}
-          className={`h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px]
+          className={`font-[family-name:var(--font-eraser-dust)] h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px]
             ${
               selectedTeacher
                 ? "bg-[#5A3625] cursor-pointer"
@@ -97,7 +97,7 @@ const StartClass = ({ onNext }: StartClassProps) => {
         </button>
         <div className="h-[11px] w-[218px] bg-[#0F1048] rounded-b-[3px]"></div>
       </div>
-      <footer className="bg-[#7C553E] h-[50px] flex justify-center items-center">
+      <footer className="font-[family-name:var(--font-eraser-dust)] bg-[#7C553E] h-[50px] flex justify-center items-center">
         <p className="text-[#fff] text-[12px] font-medium">
           Powered by Whateverchallenge
         </p>

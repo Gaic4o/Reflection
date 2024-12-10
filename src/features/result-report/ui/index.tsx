@@ -107,21 +107,21 @@ const ResultReport = ({ mainContext }: ResultReportProps) => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-center text-[#fff] mb-[40px] text-[36px] font-semibold">
+            <h1 className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-center text-[#fff] mb-[40px] text-[36px] font-semibold">
               24년 회고 일기장을 확인해보세요!
             </h1>
             {/* 30초 -> 1분 */}
             <article className="py-[16px] rounded-[8px] px-[26px] bg-black/[0.001] box-border border-2 border-white/80 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.3)]">
-              <h2 className="text-[#fff] text-[24px] font-semibold">
+              <h2 className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[#fff] text-[24px] font-semibold">
                 24년 감정 날씨
               </h2>
               <Flex className="flex flex-row mt-[33px] items-center justify-center">
                 <div className="flex flex-col justify-center items-center mr-[36px]">
-                  <p className="text-[#fff] text-[16px] mt-[10px] w-[28px] font-semibold">
+                  <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[#fff] text-[16px] mt-[10px] w-[28px] font-semibold">
                     {feedback?.feelingWhether}
                   </p>
                 </div>
-                <p className="text-[18px] font-semibold text-[#fff]">
+                <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[18px] font-semibold text-[#fff]">
                   즐거운일을 잔뜩 경험하고, 새로운 도전을 통해서 스스로를 더 잘
                   이해한 당신의 감정 날씨는 맑음이에요.
                 </p>
@@ -129,15 +129,15 @@ const ResultReport = ({ mainContext }: ResultReportProps) => {
             </article>
 
             <article className="mt-[40px] mb-[40px] py-[22px] px-[26px] rounded-[8px] bg-black/[0.001] box-border border-2 border-white/80 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.3)]">
-              <h2 className="mb-[12px] text-[24px] font-semibold text-[#fff]">
+              <h2 className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] mb-[12px] text-[24px] font-semibold text-[#fff]">
                 24년 회고 일기
               </h2>
-              <p className="text-[18px] leading-[2] text-[#fff]">
+              <p className="font-[family-name:var(--font-child-fund-korea-min-guk)] text-[18px] leading-[2] text-[#fff]">
                 {retroContext}
               </p>
             </article>
 
-            <article className="py-[31px] px-[26px] rounded-[8px] bg-black/[0.001] box-border border-2 border-white/80 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.3)]">
+            <article className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] py-[31px] px-[26px] rounded-[8px] bg-black/[0.001] box-border border-2 border-white/80 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.3)]">
               <Flex className="flex flex-row items-center mb-[27px]">
                 <Image
                   src="/home/img/start-3.webp"
@@ -235,7 +235,7 @@ const ResultReport = ({ mainContext }: ResultReportProps) => {
           </motion.div>
         )}
       </AnimatePresence>
-      <footer className="bg-[#7C553E] h-[50px] flex justify-center items-center">
+      <footer className="font-[family-name:var(--font-eraser-dust)] bg-[#7C553E] h-[50px] flex justify-center items-center">
         <p className="text-[#fff] text-[12px] font-medium">
           Powered by Whateverchallenge
         </p>

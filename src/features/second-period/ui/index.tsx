@@ -77,17 +77,17 @@ const SecondPeriod = ({ onNext }: SecondSixProps) => {
   if (currentStep === "SecondSix") {
     return (
       <Container className="mx-[10px]">
-        <h1 className="font-[family-name:var(--font-school_safety_chalkboard_eraser)] text-[64px] text-center text-[#fff] font-semibold mt-[77px] mb-[37px]">
+        <h1 className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[64px] text-center text-[#fff] font-semibold mt-[77px] mb-[37px]">
           2교시 밈퀴즈~?
         </h1>
-        <p className="text-[32px] text-center text-[#fff] font-semibold mb-[73px] mt-[37px]">
+        <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[32px] text-center text-[#fff] font-semibold mb-[73px] mt-[37px]">
           아이스브레이킹 완료! 내 점수는?
         </p>
 
-        <p className="text-[64px] mt-[129px] text-[#fff] font-semibold text-center">
+        <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[64px] mt-[129px] text-[#fff] font-semibold text-center">
           {score}점
         </p>
-        <p className="text-[32px] mt-[87px] text-[#fff] font-semibold text-center">
+        <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[32px] mt-[87px] text-[#fff] font-semibold text-center">
           이제 회고를 시작해볼까요?
         </p>
 
@@ -95,7 +95,7 @@ const SecondPeriod = ({ onNext }: SecondSixProps) => {
           <button
             onClick={() => handleNext()}
             disabled={selectedOption === null}
-            className={`h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px] transition-all duration-200 ${
+            className={`font-[family-name:var(--font-eraser-dust)] h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px] transition-all duration-200 ${
               selectedOption === null
                 ? "bg-[#5A362580] cursor-not-allowed"
                 : "bg-[#5A3625] hover:bg-[#4A2615] cursor-pointer"
@@ -116,10 +116,10 @@ const SecondPeriod = ({ onNext }: SecondSixProps) => {
 
   return (
     <Container className="mx-[10px]">
-      <h1 className="font-[family-name:var(--font-school_safety_chalkboard_eraser)] text-[64px] text-center text-[#fff] font-semibold mt-[77px] mb-[37px]">
+      <h1 className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] font-[family-name:var(--font-school_safety_chalkboard_eraser)] text-[64px] text-center text-[#fff] font-semibold mt-[77px] mb-[37px]">
         2교시 밈퀴즈~?
       </h1>
-      <p className="text-[32px] text-center text-[#fff] font-semibold mb-[73px] mt-[37px]">
+      <p className="font-[family-name:var(--font-school-safety-chalkboard-eraser)] text-[32px] text-center text-[#fff] font-semibold mb-[73px] mt-[37px]">
         아래 인물이 어떤말을 했는지 맞춰볼까요?
       </p>
 
@@ -138,7 +138,7 @@ const SecondPeriod = ({ onNext }: SecondSixProps) => {
             <div
               key={index}
               onClick={() => handleOptionClick(index)}
-              className={`p-[30px] rounded-[30px] border border-[#FFFFFF] mb-[34px] cursor-pointer transition-all duration-200 ${
+              className={`font-[family-name:var(--font-school-safety-chalkboard-eraser)] p-[30px] rounded-[30px] border border-[#FFFFFF] mb-[34px] cursor-pointer transition-all duration-200 ${
                 selectedOption === index
                   ? "bg-[#5A3625] border-[#5A3625]"
                   : "hover:bg-[#ffffff33]"
@@ -160,7 +160,7 @@ const SecondPeriod = ({ onNext }: SecondSixProps) => {
         <button
           onClick={handleNext}
           disabled={selectedOption === null}
-          className={`h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px] transition-all duration-200 ${
+          className={`font-[family-name:var(--font-eraser-dust)] h-[50px] w-[218px] text-[#fff] text-[30px] font-medium rounded-t-[40px] transition-all duration-200 ${
             selectedOption === null
               ? "bg-[#5A362580] cursor-not-allowed"
               : "bg-[#5A3625] hover:bg-[#4A2615] cursor-pointer"
@@ -170,7 +170,7 @@ const SecondPeriod = ({ onNext }: SecondSixProps) => {
         </button>
         <div className="h-[11px] w-[218px] bg-[#0F1048] rounded-b-[3px]"></div>
       </div>
-      <footer className="bg-[#7C553E] h-[50px] flex justify-center items-center">
+      <footer className="font-[family-name:var(--font-eraser-dust)] bg-[#7C553E] h-[50px] flex justify-center items-center">
         <p className="text-[#fff] text-[12px] font-medium">
           Powered by Whateverchallenge
         </p>
